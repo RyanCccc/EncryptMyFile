@@ -3,7 +3,7 @@ import getpass
 import commands
 from simplecrypt import encrypt, decrypt
 
-pwd = getpass.getpass('Enter Password')
+pwd = getpass.getpass('Enter Password: ')
 if len(sys.argv) < 2:
     in_name = raw_input('Enter input file name: ')
 else:
