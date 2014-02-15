@@ -3,8 +3,8 @@ import getpass
 import commands
 from simplecrypt import encrypt, decrypt
 
-pwd = getpass.getpass('Enter Password')
-pwd2 = getpass.getpass('Reenter Password')
+pwd = getpass.getpass('Enter Password:')
+pwd2 = getpass.getpass('Reenter Password:')
 if not pwd == pwd2:
     print 'Passwords not same'
     exit(0)
@@ -21,7 +21,7 @@ txt = encrypt(pwd, in_file.read())
 out_file.write(txt)
 out_file.flush()
 print 'Encrypted successfully. Encrypted file name:', out_name
-should_rm = raw_input('Do you want to remove '+in_name+'? y/n')
+should_rm = raw_input('Do you want to remove '+in_name+'? y/n: ')
 if should_rm == 'y':
    commands.getoutput('rm '+in_name)
    print 'Successfully removed', in_name
